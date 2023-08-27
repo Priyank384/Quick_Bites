@@ -16,7 +16,11 @@ export default function Home() {
             <p className="card-text">Some text to see the change.</p>
             <div className="container w-100">
               <select className="m-2 h-100 w-100 bg-success">
-                {}
+                {Array.from(Array(6),(e,i)=>{
+                    return (
+                        <option value={i+1}>{i+1}</option>
+                    )
+                })}
               </select>
             </div>
           </div>
