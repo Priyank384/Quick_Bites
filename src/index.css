@@ -15,3 +15,6 @@ code {
 #carousal{
   max-height: 500px;
 }
+#carouselExampleControls{
+  object-fit: contain;
+}
