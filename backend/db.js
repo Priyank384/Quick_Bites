@@ -6,6 +6,16 @@ const mongoDB = () => {
     mongoose.connect(mongoURI, { useNewUrlParser: true })
     .then(() => {
         console.log("Connected to the database");
+        const fetched_data = mongoose.connection.db.collection("food_items");
+        fetched_data.find({}).toArray()
+        .then(data =>{
+            console.log(data);
+            mongoose.connection.close();
+        })
+        .catch(err=>{
+            console.log(err);
+            mongoose.connection.close();
+        })
     })
     .catch(error => {
         console.error("Error connecting to the database:", error);
