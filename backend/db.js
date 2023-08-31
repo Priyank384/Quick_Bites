@@ -9,12 +9,12 @@ const mongoDB = () => {
         const fetched_data = mongoose.connection.db.collection("food_items");
         fetched_data.find({}).toArray()
         .then(data =>{
-            console.log(data);
-            mongoose.connection.close();
+            console.log();
+            
         })
         .catch(err=>{
             console.log(err);
-            mongoose.connection.close();
+           
         })
     })
     .catch(error => {
