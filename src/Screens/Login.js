@@ -23,6 +23,8 @@ export default function Login() {
     }
     if (json.success) {
       navigate("/");
+      localStorage.setItem("authToken", json.authToken);
+      console.log(localStorage.getItem("authToken"))
     }
   }
   const onChange = (event) => {
