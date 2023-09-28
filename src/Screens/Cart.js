@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCart, useDispatchCart } from '../Components/ContextReducer';
-// import trash from "../trash.svg";
+import trash from "../Screens/trash4.svg"
 export default function Cart() {
     let data = useCart();
     let dispatch = useDispatchCart();
@@ -63,7 +63,7 @@ export default function Cart() {
                                 <td>{food.qty}</td>
                                 <td>{food.size}</td>
                                 <td>{food.price}</td>
-                                <td ><button type="button" className="btn p-0"><delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button> </td></tr>
+                                <td ><button type="button" className="btn p-0"><img src={trash} alt='delete' onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button> </td></tr>
                         ))}
                     </tbody>
                 </table>
