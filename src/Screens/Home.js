@@ -32,18 +32,18 @@ export default function Home() {
                     <div className="carousel-inner" id='carousal'>
                         <div className="carousel-caption d-none d-md-block" style={{ zIndex: "10" }}>
                             <div className="d-flex justify-content-center">
-                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value = {search} onChange={(e)=>{setSearch(e.target.value)}} />
+                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e) => { setSearch(e.target.value) }} />
                                 {/* <button className="btn btn-outline-success text-white bg-success" type="submit">Search</button> */}
                             </div>
                         </div>
                         <div className="carousel-item active">
-                            <img src="https://source.unsplash.com/random/900×700/?drink" className="d-block w-100" style={{ filter: "brightness(30%)", height:"50", objectFit:"fill"}} alt="..." />
+                            <img src="https://source.unsplash.com/random/900×700/?drink" className="d-block w-100" style={{ filter: "brightness(30%)", height: "50", objectFit: "fill" }} alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src="https://source.unsplash.com/random/900×700/?pastry" className="d-block w-100" style={{ filter: "brightness(30%)", height:"100", objectFit:"fill" }} alt="..." />
+                            <img src="https://source.unsplash.com/random/900×700/?pastry" className="d-block w-100" style={{ filter: "brightness(30%)", height: "100", objectFit: "fill" }} alt="..." />
                         </div>
                         <div className="carousel-item">
-                            <img src="https://source.unsplash.com/random/900×700/?barbeque" className="d-block w-100" style={{ filter: "brightness(30%)", height:"100", objectFit:"fill" }} alt="..." />
+                            <img src="https://source.unsplash.com/random/900×700/?barbeque" className="d-block w-100" style={{ filter: "brightness(30%)", height: "100", objectFit: "fill" }} alt="..." />
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -68,13 +68,13 @@ export default function Home() {
                                 <hr />
                                 {foodItem !== []
                                     ?
-                                    foodItem.filter((item) => (item.CategoryName === data.CategoryName)  && (item.name.toLowerCase().includes(search)))
+                                    foodItem.filter((item) => (item.CategoryName === data.CategoryName) && (item.name.toLowerCase().includes(search)))
                                         .map(filterItems => {
                                             return (
                                                 <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
-                                                    <Card foodItem = {filterItems}
+                                                    <Card foodItem={filterItems}
                                                         options={filterItems.options[0]}
-                                                        
+
                                                     ></Card>
                                                 </div>
                                             )
@@ -89,8 +89,7 @@ export default function Home() {
                 {/* <Card /> */}
 
             </div>
-            <div> <Footer />
-            </div>
+            <div> <Footer /> </div>
         </div>
     );
 }
