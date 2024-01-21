@@ -7,7 +7,7 @@ export default function SignUp() {
 
     const handleSubmit = async(e)=>{
         e.preventDefault();    //preventDefault is a synthetic event 
-        const response = await fetch("http://localhost:4000/api/createUser",{
+        const response = await fetch("https://quickbites-backend.onrender.com/api/createUser",{
             method: 'POST',
             headers:{
                 'Content-Type' : 'application/json'

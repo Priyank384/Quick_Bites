@@ -9,7 +9,7 @@ export default function Home() {
     const [foodItem, setFoodItem] = useState([]);
 
     const loadData = async () => {
-        let response = await fetch("http://localhost:4000/api/foodData", {
+        let response = await fetch("https://quickbites-backend.onrender.com/api/foodData", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

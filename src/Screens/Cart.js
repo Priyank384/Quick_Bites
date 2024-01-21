@@ -19,7 +19,7 @@ export default function Cart() {
     const handleCheckOut = async () => {
         let userEmail = localStorage.getItem("userEmail");
         // console.log(data,localStorage.getItem("userEmail"),new Date())
-        let response = await fetch("http://localhost:4000/api/orderData", {
+        let response = await fetch("https://quickbites-backend.onrender.com/api/orderData", {
      
             method: 'POST',
             headers: {
